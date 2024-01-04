@@ -11,10 +11,10 @@ const BlogDetails = () => {
     data: blog,
     isPending,
     error,
-  } = useFetch("http://localhost:8000/blogs/" + id);
+  } = useFetch("https://json-server-neon-omega.vercel.app/blogs/" + id);
 
   const handleClick = () => {
-    fetch("http://localhost:8000/blogs/" + blog.id, {
+    fetch("https://json-server-neon-omega.vercel.app/blogs/" + blog.id, {
       method: "DELETE",
     }).then(() => {
       history("/");
