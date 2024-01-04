@@ -15,7 +15,6 @@ const Create = () => {
       author,
     };
     setIsPending(true);
-    setTimeout(() => {
       fetch("https://json-server-neon-omega.vercel.app/blogs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -25,7 +24,6 @@ const Create = () => {
         setIsPending(false);
       });
       history("/");
-    }, 800);
   };
 
   return (
